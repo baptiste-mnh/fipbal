@@ -1,0 +1,73 @@
+export const translations = {
+  fr: {
+    title: "FAIT-IL PLUS BEAU À LORIENT QU'À BREST ?",
+    error: "ERROR",
+    errorSubtext: "(Mais il fait sûrement plus beau à Brest)",
+    retry: "RÉESSAYER",
+    proof: "PREUVE",
+    settings: "Paramètres",
+    language: "Langue",
+    french: "Français",
+    breton: "Breton",
+    weatherProvider: "Fournisseur météo",
+    close: "Fermer",
+    loading: "Chargement en cours...",
+    loadingAnalysis: "ANALYSE EN COURS...",
+    refreshing: "Actualisation...",
+    lastUpdate: "Dernière mise à jour",
+    temperature: "Température",
+    feelsLike: "Ressenti",
+    weather: "Météo",
+    source: "Source",
+    refresh: "Actualiser",
+    weatherDetails: "DÉTAILS MÉTÉO",
+    dataProvidedBy: "Données météo fournies par",
+    loadingData: "Données en cours de chargement...",
+    refreshData: "Actualiser les données météo",
+    dataRetrievedLessThanHour: "Données récupérées il y a moins d'une heure",
+    yes: "Oui",
+    no: "Non",
+    madeWith: "made with",
+    by: "by",
+  },
+  br: {
+    title: "HA KAEOC'H EO AN AMZER E LORIENT EGET E BREST ?",
+    error: "FAZI",
+    errorSubtext: "(Met sur a-walc'h eo kaeoc'h an amzer e Brest)",
+    retry: "KLASKIT EN-DRO",
+    proof: "PROOF",
+    settings: "Arventennoù",
+    language: "Yezh",
+    french: "Français",
+    breton: "Brezhoneg",
+    weatherProvider: "Provider amzer",
+    close: "Serriñ",
+    loading: "O kargañ...",
+    loadingAnalysis: "DIELFENNADUR WAR OBER...",
+    refreshing: "O freskaat...",
+    lastUpdate: "Hizivadenn ziwezhañ",
+    temperature: "Temperatur",
+    feelsLike: "Sonjet",
+    weather: "Amzer",
+    source: "Mammenn",
+    refresh: "Freskaat",
+    weatherDetails: "MUNUDOÙ AN AMZER",
+    dataProvidedBy: "Roadennoù amzer pourchaset gant",
+    loadingData: "Roadennoù war gargañ...",
+    refreshData: "Freskaat ar roadennoù amzer",
+    dataRetrievedLessThanHour:
+      "Roadennoù kemeret nevez zo nebeutoc'h eget un eur",
+    yes: "Ya",
+    no: "Nann",
+    madeWith: "graet a",
+    by: "dre",
+  },
+};
+
+export const useTranslation = (language = "fr") => {
+  const t = (key) => {
+    return translations[language]?.[key] || translations.fr[key] || key;
+  };
+
+  return { t };
+};
